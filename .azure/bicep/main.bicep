@@ -24,7 +24,7 @@ resource appService 'Microsoft.Web/sites@2020-06-01' = {
     serverFarmId: appServicePlan.id
     siteConfig: {
       linuxFxVersion: linuxFxVersion
-      appCommandLine: 'gunicorn --bind=0.0.0.0:80 -k uvicorn.workers.UvicornWorker --timeout 600 main:app'
+      appCommandLine: 'gunicorn --bind=0.0.0.0 -k uvicorn.workers.UvicornWorker --timeout 600 main:app'
     }
   }
 }
