@@ -5,7 +5,7 @@ env:
   PYTHON_VERSION: "3.10"
   RESOURCE_GROUP_NAME: "dev-rg"
   LOCATION: "westeurope"
-  WEB_APP_NAME: "az400sjtrain"
+  WEB_APP_NAME: "sjdevopsmlapp"
 
 permissions:
   id-token: write
@@ -25,6 +25,7 @@ jobs:
 
       - run: |
           pipx install poetry
+          pipx inject poetry poetry-plugin-export
         name: "Install poetry"
 
       - run: |
