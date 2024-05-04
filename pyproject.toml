@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "flask-app"
+name = "ml-app"
 version = "0.1.0"
-description = "Learn devops pipelines"
+description = "Simple ml app"
 authors = ["SzymonJakubiak <szymonjakubiak@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "src" }]
@@ -54,7 +54,7 @@ exclude = [
 ]
 
 # Same as Black.
-line-length = 88
+line-length = 120
 indent-width = 4
 
 target-version = "py310"
@@ -67,9 +67,6 @@ ignore = ["ANN", "D", "T20", "DTZ", "COM812", "ISC001", "S101"]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
-
-# Allow unused variables when underscore-prefixed.
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.
