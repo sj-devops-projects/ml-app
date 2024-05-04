@@ -24,6 +24,12 @@ resource appService 'Microsoft.Web/sites@2020-06-01' = {
     serverFarmId: appServicePlan.id
     siteConfig: {
       linuxFxVersion: linuxFxVersion
+      appSettings: [
+        {
+          name: 'SCM_DO_BUILD_DURING_DEPLOYMENT'
+          value: '1'
+        }
+      ]
       appCommandLine: 'uvicorn --host=0.0.0.0 --port 80 --timeout-keep-alive 600 main:app'
     }
   }
