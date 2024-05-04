@@ -3,4 +3,4 @@ git config --global user.name $GIT_USER_NAME
 
 poetry self add poetry-plugin-export
 poetry install
-poetry run pre-commit install --install-hooks
+poetry run pre-commit install --install-hooks --overwrite
